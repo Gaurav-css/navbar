@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ebe2e2;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #00ddff;
+  position: relative;
+  background-image: url(/navbar/images/back2.jpg);
+  z-index: 1000;
+}
+
+.logo {
+  font-family: "Alex Brush", cursive;
+  font-style: normal;
+  font-size: 50px;
+  color: aliceblue;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+  font-weight: bold;
+
+}
+
+@media screen and (min-width: 768px) {
+  .nav-links a:hover {
+    color: #cc00ff;
+    text-decoration: underline;
+    
+  }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+.services,
+.contact,
+.about {
+  padding: 2rem;
+}
+
+h1,
+h2 {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(115, 205, 159);
+    padding: 1rem 0;
+    border-radius: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+footer {
+  background-color: rgb(138, 137, 135);
+  background-attachment: fixed;
+display: flex;
+position: relative;
+  justify-content: space-between;
+  margin: 0%;
+  border-radius: 20px;
+  z-index: 1000;
+}
+
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+  border-radius: 20px;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  bottom: -20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+from {
+  opacity: 0.4;
+}
+to {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+.p{
+  display: flex;align-items: center; justify-self: center; flex-direction: column;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
